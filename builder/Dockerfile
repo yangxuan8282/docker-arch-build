@@ -1,5 +1,7 @@
 FROM yangxuan8282/archlinuxarm:aarch64
 
+COPY mirrorlist /etc/pacman.d/mirrorlist
+
 RUN pacman -Syu --noconfirm base-devel git
 
 RUN 	useradd -m -G wheel -s /bin/bash alarm \
